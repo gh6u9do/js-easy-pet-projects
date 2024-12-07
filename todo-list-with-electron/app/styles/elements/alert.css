@@ -1,0 +1,22 @@
+/* -------------------------------- СТИЛИЗАЦИЯ ALERT -------------------------------------------- */
+.alert{
+    position: absolute;
+
+    top: -100%;
+
+    max-width: 30vw;
+    max-height: 10vh;
+
+    background-color: var(--dark-gray);
+
+    border: 1px solid var(--violet);
+    border-radius: 5px;
+
+    padding: 0.5rem 1rem;
+
+    text-align: center;
+
+    color: var(--violet);
+
+    transition: all 0.4s;
+}

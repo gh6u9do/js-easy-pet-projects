@@ -1,0 +1,9 @@
+.gray-theme{
+
+    --dark-gray: rgb(41, 41, 41);
+    --dim-gray: rgb(104, 102, 102);
+    --light-gray: rgb(168, 166, 166);
+    --violet: rgb(129, 80, 139);
+    --red-color: rgb(180, 97, 97);
+    --green-color: rgb(159, 212, 159);
+}

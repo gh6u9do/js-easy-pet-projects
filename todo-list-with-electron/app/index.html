@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/elements/auth-form.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/themes.css">
+    <link rel="stylesheet" href="./styles/elements/alert.css">
+    <link rel="stylesheet" href="./styles/elements/cover.css">
+    <link rel="stylesheet" href="./styles/elements/loader.css">
+    <link rel="stylesheet" href="./styles/elements/calendar-window.css">
+</head>
+
+<body class="gray-theme">
+
+    <section id="cover" class="d-none"></section>
+
+    <section class="alert" id="alert-block">
+        Login input has`t be empty
+    </section>
+
+    <section class="loader-block d-none" id="loader-block">
+        <div class="loader" id="loader"></div>
+    </section>
+
+    <section class="calendar-window d-none" id="calendar-window">
+        <div class="calendar-header">
+            <div class="calendar-header__month-name">%%%%</div>
+            <div class="calendar-header__month-selectors">
+                <div class="calendar-header__monthUp calendar-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5"></path>
+                    </svg>
+                </div>
+                <div class="calendar-header__monthDown calendar-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="calendar-days" id="calendar-days">
+            <div class="calendar-day" data-num="1">1</div>
+            <div class="calendar-day" data-num="2">2</div>
+            <div class="calendar-day" data-num="3">3</div>
+            <div class="calendar-day" data-num="4">4</div>
+            <div class="calendar-day" data-num="5">5</div>
+            <div class="calendar-day" data-num="6">6</div>
+            <div class="calendar-day" data-num="7">7</div>
+            <div class="calendar-day" data-num="8">8</div>
+            <div class="calendar-day" data-num="9">9</div>
+            <div class="calendar-day" data-num="10">10</div>
+            <div class="calendar-day" data-num="11">11</div>
+            <div class="calendar-day" data-num="12">12</div>
+            <div class="calendar-day" data-num="13">13</div>
+            <div class="calendar-day" data-num="14">14</div>
+            <div class="calendar-day" data-num="15">15</div>
+            <div class="calendar-day" data-num="16">16</div>
+            <div class="calendar-day" data-num="17">17</div>
+            <div class="calendar-day" data-num="18">18</div>
+            <div class="calendar-day" data-num="19">19</div>
+            <div class="calendar-day" data-num="20">20</div>
+            <div class="calendar-day" data-num="21">21</div>
+            <div class="calendar-day" data-num="22">22</div>
+            <div class="calendar-day" data-num="23">23</div>
+            <div class="calendar-day" data-num="24">24</div>
+            <div class="calendar-day" data-num="25">25</div>
+            <div class="calendar-day" data-num="26">26</div>
+            <div class="calendar-day" data-num="27">27</div>
+            <div class="calendar-day" data-num="28">28</div>
+            <div class="calendar-day" data-num="29">29</div>
+            <div class="calendar-day" data-num="30">30</div>
+            <div class="calendar-day" data-num="31">31</div>
+            <div class="calendar-day" data-num="32">32</div>
+            <div class="calendar-day" data-num="33">33</div>
+            <div class="calendar-day" data-num="34">34</div>
+            <div class="calendar-day" data-num="35">35</div>
+            <div class="calendar-day" data-num="36">36</div>
+            <div class="calendar-day" data-num="37">37</div>
+            <div class="calendar-day" data-num="38">38</div>
+            <div class="calendar-day" data-num="39">39</div>
+            <div class="calendar-day" data-num="40">40</div>
+            <div class="calendar-day" data-num="41">41</div>
+            <div class="calendar-day" data-num="42">42</div>
+        </div>
+        <div class="close-calendar-btn" id="close-calendar-btn">
+            <div class="x-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-registration" class="d-none">
+
+        <div class="auth-form">
+
+            <h1 class="auth-form__header">Registration:</h1>
+            
+            <input type="text" class="form-input" id="registration-form__login" placeholder="Your login...">
+            
+            <input type="password" class="form-input" id="registration-form__password" placeholder="Password...">
+            <input type="password" class="form-input" id="registration-form__confirm-password" placeholder="Confirm password...">
+
+            
+            <div class="auth-form__buttons-bar">
+                <div class="auth-form__goto-content" id="registration-form__goto-content">Lessgoo</div>
+            </div>
+            
+            <div class="auth-form__toggle-form" id="registration-form__toggle">I`m already registered</div>
+
+        </div>
+
+    </section>
+
+
+    <section id="section-login" class="">
+
+        <div class="auth-form">
+
+            <h1 class="auth-form__header">Login:</h1>
+
+            <input type="text" class="form-input" id="login-form__login" placeholder="Your nickname...">
+            <input type="password" class="form-input" id="login-form__password" placeholder="Password...">
+
+            <div class="auth-form__buttons-bar">
+                <div class="auth-form__goto-content" id="login-form__goto-content">Lessgoo</div>
+            </div>        
+
+            <div class="auth-form__toggle-form" id="login-form__toggle">Create new account</div>
+
+        </div>
+
+        
+
+
+    </section>
+
+    <section id="section-todo" class="section-todo d-none">
+
+
+        <div class="left-bar" id="left-bar">
+            <div class="week" id="week">
+                <div class="day-of-week mon">Mon</div>
+                <div class="day-of-week tue">Tue</div>
+                <div class="day-of-week wed">Wed</div>
+                <div class="day-of-week thu">Thu</div>
+                <div class="day-of-week fri">Fri</div>
+                <div class="day-of-week sat">Sat</div>
+                <div class="day-of-week sun">Sun</div>
+            </div>
+    
+            <div class="calendar-btn" id="calendar-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.2rem" width="1.2rem" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                  </svg>              
+            </div>
+    
+            <div class="date-info">
+                <div class="date" id="current-date">dd</div>
+                <div class="month" id="current-month">mm</div>
+                <div class="year" id="current-year">yyyy</div>
+            </div>
+    
+        </div>
+        
+        <div class="content" id="content">
+            
+            <div class="tasks-container" id="tasks-container">
+                
+    
+                <div class="tasks-header d-none" id="tasks-header">
+                    <div class="tasks-header__addTask" id="add-task-btn">Add new</div>
+                    <div class="tasks-header__text" >Your tasks:</div>
+                </div>
+    
+    
+                <div class="tasks-list d-none" id="tasks-list">
+    
+                    <!-- <div class="task">
+                        <div class="num-task">#1</div>
+                        <textarea class="text-task" placeholder="Enter something..."></textarea>
+                        <div class="delete-task">
+                            <svg xmlns="http://www.w3.org/2000/svg" color="var(--red-color)" height="1rem" width="1rem" fill="" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>  
+                        </div>
+                    </div> -->
+    
+                </div>
+    
+                <div class="tasks-add-first-task d-none" id="tasks-add-first-task">You don't have any tasks <br> do you want to add?</div>
+            </div>
+    
+    
+    
+            <!-- <div class="diary-container" id="diary-container">
+    
+                <div class="diary-header">Your thoughts:</div>
+    
+                <textarea class="diary-field" name="" id="diary-field">
+    
+                </textarea>
+    
+            </div> -->
+    
+        </div>
+
+       <div class="right-bar">
+            <div class="logout-container">
+                <div class="logout-btn" id="logout-btn">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1.5rem" width="1.9rem" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9"></path>
+                    </svg>
+
+                </div>
+            </div>
+       </div>
+
+    </section>
+
+
+   
+
+
+    <script src="./script.js" type="module"></script>
+    <script src="./ui.js"></script>
+</body>
+
+</html>

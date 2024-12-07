@@ -1,0 +1,34 @@
+.loader-block{
+    z-index: 999;
+
+    position: absolute;
+
+    width: 100vw;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--dark-gray);
+
+}
+
+.loader{
+    border: 5px solid #f3f3f3; /* Светлый цвет обводки */
+    border-top: 5px solid #333; /* Темный цвет обводки */
+
+    border-radius: 50%;
+
+    width: 2rem;
+    height: 2rem;
+
+    animation: spin 1s linear infinite;
+
+    margin: 0 auto;
+}
+
+@keyframes spin{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
